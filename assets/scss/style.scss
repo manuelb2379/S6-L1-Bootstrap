@@ -1,0 +1,23 @@
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+
+  .card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+
+    h3 {
+      color: white
+    }
+
+    p {
+      color: white !important;
+    }
+  }
+
+  .bg-light {
+    background-color: #1e1e1e !important;
+    color: #f1f1f1;
+  }
+
+}
