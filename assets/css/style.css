@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body.dark-mode {
   background-color: #121212;
   color: #f1f1f1;
@@ -15,6 +16,17 @@ body.dark-mode .card p {
 body.dark-mode .bg-light {
   background-color: #1e1e1e !important;
   color: #f1f1f1;
+}
+body.dark-mode .modal-content {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1;
+}
+body.dark-mode .btn-close {
+  background-color: white !important;
+}
+
+.sectionContainer {
+  min-height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

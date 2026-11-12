@@ -50,83 +50,87 @@
     </div>
   </header>
 
-  <section>
-    <!-- Hero: titolo grande, sottotitolo, bottone CTA. Usa container + text-center + classi utility -->
+  <div class="sectionContainer">
 
-    <div id="carouselExample" class="carousel slide text-white">
-      <div class="carousel-inner text-center">
-        <div class="carousel-item active bg-primary py-5">
-          <h2 class="fs-1 fw-bold mb-3">Saldi di primavera</h2>
-          <p class="fs-5 text-white mb-4">Fino al 50% di sconto sui prodotti in evidenza</p>
+    <section>
+      <!-- Hero: titolo grande, sottotitolo, bottone CTA. Usa container + text-center + classi utility -->
+
+      <div id="carouselExample" class="carousel slide text-white">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active bg-primary py-5">
+            <h2 class="fs-1 fw-bold mb-3">Saldi di primavera</h2>
+            <p class="fs-5 text-white mb-4">Fino al 50% di sconto sui prodotti in evidenza</p>
+          </div>
+          <div class="carousel-item bg-success py-5">
+            <h2 class="fs-1 fw-bold mb-3">Nuova collezione</h2>
+            <p class="fs-5 text-white mb-4">Scopri i nuovi arrivi della settimana</p>
+          </div>
+          <div class="carousel-item bg-dark py-5">
+            <h2 class="fs-1 fw-bold mb-3">Spedizione gratis</h2>
+            <p class="fs-5 text-white mb-4">Sopra i 50€ di acquisto</p>
+          </div>
         </div>
-        <div class="carousel-item bg-success py-5">
-          <h2 class="fs-1 fw-bold mb-3">Nuova collezione</h2>
-          <p class="fs-5 text-white mb-4">Scopri i nuovi arrivi della settimana</p>
-        </div>
-        <div class="carousel-item bg-dark py-5">
-          <h2 class="fs-1 fw-bold mb-3">Spedizione gratis</h2>
-          <p class="fs-5 text-white mb-4">Sopra i 50€ di acquisto</p>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </section>
+
+    <main class="container my-4">
+      <div class="alert alert-info alert-dismissible">Spedizione gratis sopra i 50€.<button class="btn-close"
+          data-bs-dismiss="alert"></button></div>
+
+      <div class="row">
+
+        <aside class="col-lg-3 d-none d-xl-block">
+          <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
+          <div class="bg-light p-3 rounded border">
+            <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
+            <p class="m-0 mb-2">Scarpe</p>
+            <p class="m-0 mb-2">T-shirt</p>
+            <p class="m-0 mb-2">Borse</p>
+            <p class="m-0 mb-2">Accessori</p>
+          </div>
+        </aside>
+
+        <section id="prodotti" class="col-12 col-xl-9 mb-3">
+          <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
+          <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza <span
+              class="badge bg-danger fs-6">-30%</span></h2>
+
+          <div class="row" id="productRow">
+
+        </section>
+
+      </div>
+    </main>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImg" class="img-fluid rounded mb-3" alt="">
+            <p id="modalDesc"></p>
+            <p class="fw-bold fs-5 mb-0" id="modalPrice"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            <button type="button" class="btn btn-success">Aggiungi al carrello</button>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
 
-  </section>
-
-  <main class="container my-4">
-    <div class="alert alert-info alert-dismissible">Spedizione gratis sopra i 50€.<button class="btn-close"
-        data-bs-dismiss="alert"></button></div>
-
-    <div class="row">
-
-      <aside class="col-lg-3 d-none d-xl-block">
-        <!-- Sidebar categorie. Visibile solo da lg in su (d-none d-lg-block) -->
-        <div class="bg-light p-3 rounded border">
-          <h3 class="fs-5 fw-bold mb-3">Categorie</h3>
-          <p class="m-0 mb-2">Scarpe</p>
-          <p class="m-0 mb-2">T-shirt</p>
-          <p class="m-0 mb-2">Borse</p>
-          <p class="m-0 mb-2">Accessori</p>
-        </div>
-      </aside>
-
-      <section id="prodotti" class="col-12 col-xl-9 mb-3">
-        <!-- Griglia prodotti responsive (1 / 2 / 3 / 4 per riga in base al breakpoint) -->
-        <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza <span
-            class="badge bg-danger fs-6">-30%</span></h2>
-
-        <div class="row" id="productRow">
-
-      </section>
-
-    </div>
-  </main>
-
-  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalTitle"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
-        </div>
-        <div class="modal-body">
-          <img id="modalImg" class="img-fluid rounded mb-3" alt="">
-          <p id="modalDesc"></p>
-          <p class="fw-bold fs-5 mb-0" id="modalPrice"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-success">Aggiungi al carrello</button>
-        </div>
-      </div>
-    </div>
   </div>
 
   <footer class="bg-dark text-white py-4 mt-5">
@@ -135,6 +139,7 @@
       <p class="m-0">© 2026 Epishop - tutti i diritti riservati</p>
     </div>
   </footer>
+  
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
