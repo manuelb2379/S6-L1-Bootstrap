@@ -12,6 +12,15 @@ body.dark-mode .card h3 {
 body.dark-mode .card p {
   color: white !important;
 }
+body.dark-mode .card.card-scarpe h3 {
+  color: #1d4ed8;
+}
+body.dark-mode .card.card-abbigliamento h3 {
+  color: #dc2626;
+}
+body.dark-mode .card.card-accessori h3 {
+  color: #eab308;
+}
 body.dark-mode .bg-light {
   background-color: #1e1e1e !important;
   color: #f1f1f1;
@@ -26,6 +35,39 @@ body.dark-mode .btn-close {
 
 .sectionContainer {
   min-height: 100vh;
+}
+
+.card {
+  border: 1px solid rgb(244, 244, 244);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card.card-scarpe {
+  border-top: 4px solid #1d4ed8;
+}
+.card.card-scarpe .card-title {
+  color: #1d4ed8;
+}
+
+.card.card-abbigliamento {
+  border-top: 4px solid #dc2626;
+}
+.card.card-abbigliamento .card-title {
+  color: #dc2626;
+}
+
+.card.card-accessori {
+  border-top: 4px solid #eab308;
+}
+.card.card-accessori .card-title {
+  color: #eab308;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

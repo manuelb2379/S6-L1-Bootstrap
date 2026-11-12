@@ -1,3 +1,15 @@
+$colori-categoria: (
+  scarpe: #1d4ed8,
+  abbigliamento: #dc2626,
+  accessori: #eab308,
+);
+// Colori per il tema scuro (versioni scure, così il testo bianco resta leggibile)
+$colori-scuro: (
+  scarpe: #1e3a5f,
+  abbigliamento: #1e4d2b,
+  accessori: #5c4a14,
+);
+
 body.dark-mode {
   background-color: #121212;
   color: #f1f1f1;
@@ -12,6 +24,13 @@ body.dark-mode {
 
     p {
       color: white !important;
+    }
+
+    @each $nome, $colore in $colori-categoria {
+      &.card-#{$nome} h3 {
+        color: $colore;
+      }
+      
     }
   }
 
@@ -34,3 +53,24 @@ body.dark-mode {
   min-height: 100vh;
 }
 
+.card {
+  border: 1px solid rgb(244, 244, 244);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@each $nome, $colore in $colori-categoria {
+  .card.card-#{$nome} {
+    border-top: 4px solid $colore; // bordo superiore spesso
+
+    .card-title {
+      color: $colore; //nome del prodotto dello stesso colore del bordo
+    }
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}

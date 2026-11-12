@@ -104,7 +104,18 @@
           <h2 class="fs-3 fw-bold mb-4 text-center text-md-start">Prodotti in evidenza <span
               class="badge bg-danger fs-6">-30%</span></h2>
 
-          <div class="row" id="productRow">
+            <!--contenitore dei bottoni filtro, messo PRIMA del container dei prodotti (#productRow) -->
+          <div id="filtri" class="mb-4">
+            <!-- Il primo bottone "Tutti" ha anche la classe "active" perché all'avvio mostra tutti i prodotti -->
+            <!-- data-categoria deve essere IDENTICO al valore "category" scritto nell'array products del JS -->
+            <button type="button" class="btn btn-outline-primary me-2 mb-2 active" data-categoria="tutti">Tutti</button>
+            <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="scarpe">Scarpe</button>
+            <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="abbigliamento">Abbigliamento</button>
+            <button type="button" class="btn btn-outline-primary me-2 mb-2" data-categoria="accessori">Accessori</button>
+          </div>
+
+          <div class="row" id="productRow"></div>
+
 
         </section>
 
